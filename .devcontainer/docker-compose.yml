@@ -18,3 +18,5 @@ services:
       - REACT_APP_STARTZOOM=17
       - REACT_APP_MAXZOOM=23
       - REACT_APP_TILEURL=/tiles/data/rp-test/{z}/{x}/{y}.png
+      - REACT_APP_TILE_URL=http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}
+      - REACT_APP_MAPBOX_ACCESS_TOKEN=pk.eyJ1IjoiYmVuc3RhY2V5MTIzIiwiYSI6ImNtMmprcWZ0ajA2aGsybHB5NXY4cmk5ZjkifQ.jDfkxiljc7bk9CRi_bU9eg

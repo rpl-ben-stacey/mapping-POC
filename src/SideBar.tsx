@@ -9,6 +9,8 @@ const Sidebar: React.FC = () => {
         <li><Link to="/arcgis">ArcGIS Map</Link></li>
         <li><Link to="/mapbox">Mapbox Map</Link></li>
         <li><Link to="/leaflet">React Leaflet Map</Link></li>
+        <li><Link to="/layers">Open Layers</Link></li>
+
       </ul>
     </div>
   );

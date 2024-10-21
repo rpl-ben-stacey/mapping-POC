@@ -4,6 +4,7 @@ import ArcGISPage from './pages/ArcGIS';
 import LeafletPage from './pages/Leaflet';
 import MapboxPage from './pages/MapBox';
 import Sidebar from './SideBar';
+import OpenLayersPage from './pages/OpenLayers';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
             <Route path="/arcgis" element={<ArcGISPage />} />
             <Route path="/mapbox" element={<MapboxPage />} />
             <Route path="/leaflet" element={<LeafletPage />} />
+            <Route path="/layers" element={<OpenLayersPage />} />
           </Routes>
         </div>
       </div>
