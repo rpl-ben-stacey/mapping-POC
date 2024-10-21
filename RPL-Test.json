@@ -1,0 +1,79 @@
+{
+    "featureCollection": {
+        "type": "FeatureCollection",
+        "features": [
+            {
+                "type": "Feature",
+                "properties": {
+                    "id": "4673a72f-4419-4c3e-86cf-d3aef2cbbf20",
+                    "type": "OperationalArea",
+                    "fill": "#29ff00",
+                    "fill-opacity": 0,
+                    "stroke-width": 0,
+                    "name": "Operational Area",
+                    "category": "default"
+                },
+                "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [
+                        [
+                            [
+                                176.055417,
+                                -37.675074
+                            ],
+                            [
+                                176.055616,
+                                -37.675448
+                            ],
+                            [
+                                176.056198,
+                                -37.675749
+                            ],
+                            [
+                                176.05649,
+                                -37.675673
+                            ],
+                            [
+                                176.056158,
+                                -37.674866
+                            ],
+                            [
+                                176.055417,
+                                -37.675074
+                            ]
+                        ],
+                        [
+                            [
+                                180,
+                                -80
+                            ],
+                            [
+                                180,
+                                80
+                            ],
+                            [
+                                -180,
+                                80
+                            ],
+                            [
+                                -180,
+                                -80
+                            ],
+                            [
+                                180,
+                                -80
+                            ]
+                        ]
+                    ]
+                }
+            }
+        ]
+    },
+    "name": "RPL-Test",
+    "description": "Robotics Plus test site",
+    "tileURL": "/tiles/data/rp-test/{z}/{x}/{y}.png",
+    "centerLatitude": -37.67543797703169,
+    "centerLongitude": 176.0563796050459,
+    "startZoom": 17,
+    "maxZoom": 23
+}

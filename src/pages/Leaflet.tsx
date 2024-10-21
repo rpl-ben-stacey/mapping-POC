@@ -1,18 +1,43 @@
-import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
+import React from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
-const LeafletMap: React.FC = () => (
-  <MapContainer center={[34.0522, -118.2437]} zoom={10} style={{ height: '500px', width: '100%' }}>
-    <TileLayer
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    />
-    <Marker position={[34.0522, -118.2437]}>
-      <Popup>Los Angeles</Popup>
-    </Marker>
-  </MapContainer>
-);
+const LeafletMap: React.FC = () => {
+  const centerLatitude = parseFloat(
+    process.env.REACT_APP_CENTERLATITUDE || "-37.67543797703169"
+  );
+  const centerLongitude = parseFloat(
+    process.env.REACT_APP_CENTERLONGITUDE || "176.0563796050459"
+  );
+  const startZoom = parseInt(process.env.REACT_APP_STARTZOOM || "17", 10);
+  const maxZoom = parseInt(process.env.REACT_APP_MAXZOOM || "23", 10);
+  const tileUrl =
+    process.env.REACT_APP_TILEURL ||
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+
+  return (
+    <MapContainer
+      center={[centerLatitude, centerLongitude]}
+      zoom={startZoom}
+      maxZoom={maxZoom}
+      style={{ height: "500px", width: "100%" }}
+    >
+      {/* <TileLayer
+        url={tileUrl}
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      /> */}
+      <TileLayer
+        url={tileUrl}
+        maxNativeZoom={21}
+        maxZoom={maxZoom}
+        minZoom={startZoom}
+      />
+      <Marker position={[centerLatitude, centerLongitude]}>
+        <Popup>Center of the Map</Popup>
+      </Marker>
+    </MapContainer>
+  );
+};
 
 const LeafletPage: React.FC = () => (
   <div>

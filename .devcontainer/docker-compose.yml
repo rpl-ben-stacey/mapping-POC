@@ -13,4 +13,8 @@ services:
       - ~/.gitconfig:/home/rpl/.gitconfig
     environment:
       - PORT=4050
-
+      - REACT_APP_CENTERLATITUDE=-37.67543797703169
+      - REACT_APP_CENTERLONGITUDE=176.0563796050459
+      - REACT_APP_STARTZOOM=17
+      - REACT_APP_MAXZOOM=23
+      - REACT_APP_TILEURL=/tiles/data/rp-test/{z}/{x}/{y}.png

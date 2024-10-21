@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Sidebar from './Sidebar';
-import ArcGISPage from './pages/ArcGISPage';
-import MapboxPage from './pages/MapboxPage';
-import LeafletPage from './pages/LeafletPage';
+import ArcGISPage from './pages/ArcGIS';
+import LeafletPage from './pages/Leaflet';
+import MapboxPage from './pages/MapBox';
+import Sidebar from './SideBar';
 
 const App: React.FC = () => {
   return (
