@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  poc:
+    container_name: poc
+    image: roboticsplus/nodejs:1.0.0
+    ports:
+      - 4050:4050
+    volumes:
+      - ../:/home/rpl/workspace
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.ssh:/home/rpl/.ssh
+      - ~/.gitconfig:/home/rpl/.gitconfig
+    environment:
+      - PORT=4050
+

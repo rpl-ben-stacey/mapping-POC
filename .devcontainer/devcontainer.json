@@ -1,0 +1,33 @@
+{
+	"name": "mapping-poc",
+	"dockerComposeFile": [
+		"docker-compose.yml"
+	],
+	"service": "poc",
+	"runServices": [
+		"poc"
+	],
+	"shutdownAction": "stopCompose",
+	"overrideCommand": true,
+	"remoteUser": "rpl",
+	"workspaceFolder": "/home/rpl/workspace",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Prisma.prisma",
+				"esbenp.prettier-vscode"
+			],
+			"settings": {
+				"files.eol": "\n",
+				"editor.tabSize": 2,
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"terminal.integrated.profiles.linux": {
+					"zsh": {
+						"path": "/bin/zsh"
+					}
+				}
+			}
+		}
+	}
+}
+
